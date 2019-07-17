@@ -76,7 +76,7 @@ explore: users {
   }
 }
 
-explore:pdt_a {}
+explore:pdt_aaa {}
 
 
 explore: orders_full {}

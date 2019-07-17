@@ -1,4 +1,4 @@
-view: pdt_a {
+view: pdt_aaa {
     derived_table: {
       datagroup_trigger: smelookml_default_datagroup
       explore_source: users {
