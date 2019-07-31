@@ -1,5 +1,7 @@
 connection: "thelook"
-include: "*.view"
+#include: "/base_views/*.view"
+include: "/**/*.view"
+
 
 
 datagroup: smelookml_default_datagroup {

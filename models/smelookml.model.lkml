@@ -1,4 +1,5 @@
 connection: "thelook"
+include: "/**/*.view"
 
 # include all the views
 include: "*.view"
