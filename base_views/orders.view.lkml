@@ -51,6 +51,8 @@ dimension: status_color {
         END;;
   html: {{orders.status._rendered_value}} ;;
 }
-
+  set: order_details {
+    fields: [id, traffic_source, status]
+  }
 
 }

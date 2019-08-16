@@ -23,6 +23,15 @@ view: users {
     sql: ${TABLE}.country ;;
   }
 
+  dimension: app_domain{
+    label: "Media"
+    type: string
+    sql:
+    CASE WHEN ${state} = 'Texas' THEN ${city}
+    ELSE ${email}
+    END;;
+  }
+
 
 
 
@@ -38,6 +47,27 @@ view: users {
 #     {% endif %};;
 #   }
 
+
+  dimension: formatted_checker {
+    type: string
+    sql: ${created_date} ;;
+    html:
+        {% if users.date_type._parameter_value == "EU" %}
+      {{ rendered_value | date: "%m/%d/%y" }}
+    {% elsif users.date_type._parameter_value == "USA" %}
+      {{ rendered_value | date: "%d/%m/%y" }}
+    {% else %}
+        "booooooooooooooo"
+    {% endif %}
+    ;;
+  }
+
+  # dynamic dimension(s)
+  parameter: date_type {
+    type: string
+    allowed_value: { value: "EU" }
+    allowed_value: { value: "USA" }
+  }
 
 
   dimension: date_format {
@@ -157,6 +187,17 @@ view: users {
   measure: avg_age {
     type: average
     sql: ${age} ;;
+  }
+
+  measure: count_test {
+    type: count
+    drill_fields: [user_details*]
+  }
+
+
+
+  set: user_details {
+    fields: [id, first_name, city, state, country, orders.*]
   }
 
 

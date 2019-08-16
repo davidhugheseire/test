@@ -11,15 +11,19 @@ view: derived_orders {
       WHERE
  --       {% condition status_parameter %} status {% endcondition %}
  --       and
- --       {% condition date_filter %} created_date {% endcondition %}
+        {% condition id_filter_1 %} user_id {% endcondition %}
  --       and
-         ${user_id} > {% parameter id_filter %}
+    --     ${user_id} > {% parameter id_filter %}
       ;;
   }
 
 
   filter: date_filter {
     type: date
+  }
+
+  filter: id_filter_1 {
+    type: number
   }
 
   parameter: id_filter {
