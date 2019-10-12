@@ -1,11 +1,17 @@
 ---
 title: Help Center
 navigation:
-  - section: Help Desk
-  - document: 00_data_dictionary
-    label: Data Dictionary
+- section: Help Desk
+- document: 00_data_dictionary
+label: Data Dictionary
+- section: Release Notes
+- document: 05_release_notes
+label: Release Notes
+- document: 06_release_note_1911
+label: Release Note 1911
+- document: Test
+label: test
 ---
-
 
 # Test
 

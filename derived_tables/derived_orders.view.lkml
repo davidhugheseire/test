@@ -8,12 +8,6 @@ view: derived_orders {
           orders2.traffic_source  AS "traffic_source",
           orders2.user_id  AS "user_id"
       FROM public.orders  AS orders2
-      WHERE
- --       {% condition status_parameter %} status {% endcondition %}
- --       and
-        {% condition id_filter_1 %} user_id {% endcondition %}
- --       and
-    --     ${user_id} > {% parameter id_filter %}
       ;;
   }
 

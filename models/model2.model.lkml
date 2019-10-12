@@ -9,10 +9,10 @@ datagroup: smelookml_default_datagroup {
   max_cache_age: "24 hour"
 }
 
-explore: users {
-  join: orders {
-    sql_on: ${users.id} = ${orders.user_id} ;;
-  }
-}
+# explore: users {
+#   join: orders {
+#     sql_on: ${users.id} = ${orders.user_id} ;;
+#   }
+# }
 
-explore:pdt_aaa {}
+# explore:pdt_aaa {}

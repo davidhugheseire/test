@@ -2,7 +2,7 @@ connection: "thelook"
 include: "/**/*.view"
 
 # include all the views
-include: "*.view"
+# include: "*.view"
 
 datagroup: smelookml_default_datagroup {
   sql_trigger: SELECT 1;;
@@ -71,41 +71,41 @@ explore: users2 {
 }
 
 
-explore: users {
-  join: orders {
-    sql_on: ${users.id} = ${orders.user_id} ;;
-  }
-}
+# explore: users {
+#   join: orders {
+#     sql_on: ${users.id} = ${orders.user_id} ;;
+#   }
+# }
 
-explore:pdt_aaa {}
-
-
-explore: orders_full {}
-explore: users_full {}
-explore: size {}
-explore: union_example {}
+# explore:pdt_aaa {}
 
 
-
-explore:cross_ex{
-  from: products
-  join: size {
-    type: cross
-  }
-}
+# explore: orders_full {}
+# explore: users_full {}
+# explore: size {}
+# explore: union_example {}
 
 
 
+# explore:cross_ex{
+#   from: products
+#   join: size {
+#     type: cross
+#   }
+# }
 
 
-explore: users_full_2 {
-  from: users_full
-  join: orders_full {
-    type: full_outer
-    sql_on: ${users_full_2.id} = ${orders_full.user_id} ;;
-    relationship: one_to_many
-  }
-}
+
+
+
+# explore: users_full_2 {
+#   from: users_full
+#   join: orders_full {
+#     type: full_outer
+#     sql_on: ${users_full_2.id} = ${orders_full.user_id} ;;
+#     relationship: one_to_many
+#   }
+# }
 
 explore: product_facts {
   join: products {
