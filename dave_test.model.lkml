@@ -13,7 +13,12 @@ datagroup: dave_test_default_datagroup {
 
 persist_with: dave_test_default_datagroup
 
-explore: users {}
+explore: users {
+  join: users2 {
+    from: users
+    sql_on: 1=1 ;;
+  }
+}
 
 # - explore: events
 #   joins:
