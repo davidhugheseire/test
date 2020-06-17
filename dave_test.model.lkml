@@ -1,4 +1,5 @@
 connection: "thelook"
+label: " A test sorting"
 
 # include all the views
 include: "*.view"
