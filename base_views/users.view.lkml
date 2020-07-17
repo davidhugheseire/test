@@ -14,7 +14,7 @@ view: users {
 
   dimension: city {
     type: string
-    sql: ${TABLE.city ;;
+    sql: ${TABLE}.city ;;
   }
 
   dimension: country {
@@ -27,7 +27,7 @@ view: users {
     label: "Media"
     type: string
     sql:
-    CASE WHEN ${state} = 'Texas' THEN ${city}
+    CASE WHEN ${state} = 'Texas' THEM ${city}
     ELSE ${email}
     END;;
   }
