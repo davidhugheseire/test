@@ -35,17 +35,17 @@ view: users {
 
 
 
-#   dimension: date_formatted {
-#     label: "Date_formatted"
-#     sql: ${created_date} ;;
-#     html:
-#     {% if _user_attributes['region'] == 'EU' %}
-#       {{ rendered_value | date: "%m/%d/%y" }}
-#     {% endif %}
-#     {% if _user_attributes['region'] == 'USA' %}
-#       {{ rendered_value | date:  "%d/%m/%y" }}
-#     {% endif %};;
-#   }
+  dimension: date_formatted {
+    label: "Date_formatted"
+    sql: ${created_date} ;;
+    html:
+    {% if _user_attributes['region'] == 'EU' %}
+      {{ rendered_value | date: "%m/%d/%y" }}
+    {% endif %}
+    {% if _user_attributes['region'] == 'USA' %}
+      {{ rendered_value | date:  "%d/%m/%y" }}
+    {% endif %};;
+  }#
 
 
   dimension: formatted_checker {
