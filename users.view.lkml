@@ -72,6 +72,24 @@ view: users {
     drill_fields: [detail*]
   }
 
+
+  measure: html_test {
+    type: number
+    label: "{% if id._value == 0 %} Trials {% else %} Paid {% endif %}"
+    sql: sum(${TABLE}.id) ;;
+    html:
+    {% if id._value == 0  %}
+    <p style="color: black; font-size:100%">{{rendered_value}}</p>
+    {% elsif  id._value <= zip._value  %}
+    <p style="color: green; font-size:100%">{{rendered_value}}</p>
+    {% else %}
+    <p style="color: red; font-size:100%">{{rendered_value}}</p>
+    {% endif %};;
+  }
+
+
+
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
