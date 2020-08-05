@@ -1,6 +1,7 @@
 connection: "thelook"
 #include: "/base_views/*.view"
 include: "/**/*.view"
+include: "/lookml_dashboards/table_next.dashboard"
 
 
 
