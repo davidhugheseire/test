@@ -12,6 +12,7 @@ datagroup: smelookml_default_datagroup {
 explore: users {
   join: orders {
     sql_on: ${users.id} = ${orders.user_id} ;;
+    relationship: many_to_one
   }
 }
 

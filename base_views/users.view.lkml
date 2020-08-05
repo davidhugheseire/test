@@ -116,7 +116,7 @@ view: users {
     html: {{ rendered_value | date:  "%d/%m/%y" }};;
   }
 
-  dimension: date_formatted {
+  dimension: date_formatte {
     group_label: "Formatted"  label: "Date"
     sql: ${created_date} ;;
     html: {{ rendered_value | date: "%b %d, %y" }};;
